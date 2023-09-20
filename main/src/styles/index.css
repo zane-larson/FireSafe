@@ -1,0 +1,148 @@
+*{
+  padding: 0;
+  margin:0;
+
+}
+body {
+  margin: 0;
+  font-family: Rockwell, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: Rockwell;
+  src: url(https://kinsta.com/blog/web-safe-fonts/#27-rockwell);
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.backdrop{
+  background-image: linear-gradient(
+    rgba(0,0,0,0.3),
+    rgba(0,0,0,0.3)),
+    url('https://www.housedigest.com/img/gallery/one-easy-but-crucial-way-to-fireproof-your-home/l-intro-1660165004.jpg') ;
+  background-size: cover;
+  height: 100vh;
+  opacity: .95;
+  
+
+  
+}
+.pheader {
+  color:white;
+  text-shadow: 4px 4px 5px black;
+  font-family: Rockwell;
+  font-weight: 300;
+  font-size: 3rem;
+}
+
+
+
+#ip2 {
+  border-color:  rgba(255, 255, 255, 0.35);
+  border-radius: 40px;
+  box-shadow: 3px 3px 10px black;
+  padding: 20px; 
+  width: 100%;
+  height: auto;    
+  text-align: center;
+  font-size: 1.7rem;
+  background-color: rgba(255, 255, 255, 0.35);
+  font-family: "Roboto","Helvetica","Arial",sans-serif;;
+
+}
+input:focus{
+  border: 3px solid #555;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+input::placeholder {
+  color: rgba(57, 57, 57, 0.654);
+}
+
+.spacer{
+  height: 1000px;
+}
+
+.home-button {
+  margin:auto;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  text-decoration: none;
+  text-align: center;
+  border-color: rgb(153, 51, 51);
+  width: 45%;
+  display:block;
+  margin-top: 7px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  box-sizing: content-box;
+  background-color: rgb(153, 51, 51);
+  color:white;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  box-shadow: 3px 3px 5px black;
+  text-shadow: 3px 3px 2px black;
+}
+        
+.subheader {
+  color:white;
+  text-shadow: 3px 3px 2px black;
+  font-family: Rockwell;
+  font-weight: 500;
+}
+
+.container {
+  padding-top: 25vh;
+}
+link{
+  text-decoration: none;
+}
+.underpageinfo{
+  padding:20px;
+  display: inline-flex;
+  width: 100%;
+  
+}
+.infoimg{
+  max-height: 40vh;
+  border-radius: 20px;
+  max-width: 40vw;
+  height: auto;
+  width: auto;
+  display: block;
+}
+
+.infotext{
+  padding:20px;
+  font-family: Rockwell;
+  display: flex;
+  max-width: 50vw;
+  
+}
+h2.infotext{
+ display:inline-block;
+ color:black; 
+ text-shadow: none;
+}
+
+.infotextcontainer {
+  margin:auto;
+  display: inline;
+}
+
+.home-or{
+  color:white;
+  text-align: center;
+  font-family: Rockwell;
+  font-size:1.3rem;
+  padding-top: 7px;
+}
