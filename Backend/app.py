@@ -9,24 +9,28 @@ app = create_app()
 
 CORS(app)
 mail =Mail(app)
-app.config['MAIL_SERVER'] = "smtp.gmail.com"
-app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = "firestopusaflask@gmail.com"
-app.config['MAIL_PASSWORD'] = "tvop swzw zzsp idzi"
-app.config["MAIL_USE_SSL"] = True
-app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_SERVER'] = "smtp.office365.com"
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USERNAME'] = "firestop@stopfireUSA.com"
+app.config['MAIL_PASSWORD'] = "i7RUg.h6^za(BkF2"
+app.config["MAIL_USE_SSL"] = False
+app.config['MAIL_USE_TLS'] = True
 mail = Mail(app)
-@app.route('/home', methods=["GET", 'POST'])
+@app.route('/email', methods=["GET", 'POST'])
 def home():
     if request.method == "POST":
-        msg = Message("Hey", sender="firestopusaflask@gmail.com", recipients=["firestopusaflask@gmail.com"])
-        msg.body = "Hey how are you? is everything okay?"
-        
+        data= request.get_json()
+        print(data)
+        print(data["Name"])
+        msg = Message("StopFire Contact Message", sender="firestop@stopfireUSA.com", recipients=["firestop@stopfireUSA.com"])
+        msg.body = "Name - " + data["Name"] + "\nAddress - " + data["Address"] + "\nEmail - " + data["Email"] + "\nPhone Numer - " + data["PhoneNumber"] +"\n\n\n\nAdditional Notes - " + data["AdditionalNotes"]
         try:
             mail.send(msg)
+            print("working")
+            return jsonify("EmailSent")
         except Exception as e:
-            return str(e)
-
+            print(str(e))
+            return jsonify("didnt work")
     return jsonify("sent email")
 
 @app.route("/users", methods=["GET"])

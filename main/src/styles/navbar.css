@@ -73,14 +73,27 @@ padding: 7px
     display: flex;
 }
 .logo{
-    order: 1;
     font-size: 2.3rem;
+    display: inline-flex;
+    float:left
 }
 
 .menu-items li{
     list-style: none;
-    margin-left: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    color:inherit;
+    
+    
+}
+
+.menu-items{
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar a{
@@ -94,3 +107,25 @@ padding: 7px
     color: #117964;
 }
 
+
+.list-container{
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    justify-content: center;
+
+}
+
+.menu-items div{
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+}
+
+/* .menu-items div:hover{
+    background-color: #444;
+    color:white;
+} */
